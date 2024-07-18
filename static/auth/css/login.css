@@ -1,0 +1,57 @@
+html,body{
+    margin:0;
+    height:100%;
+    overflow:auto;
+}
+
+.entrar{
+    font-family: "Segoe UI","Arial","Times New Roman";
+}
+.botao{
+    height: 30px;
+    width: 100px;
+    outline: none;
+    background-color: white;
+}
+
+.botao:hover{
+    height: 30px;
+    width: 100px;
+    background-color: #ffc0cb;
+    transition: 1s;
+}
+
+.forget{
+    color: black;
+}
+.forget:hover{
+    color: pink;
+    transition: 0,5s;
+}
+
+.text-center{
+    color: black;
+}
+
+.register{
+    color: pink;
+}
+
+.register:hover{
+    color: black;
+    transition: 0,5s;
+}
+
+.back{
+    color: black;
+}
+
+.back:hover{
+    color: pink;
+    transition: 0,5s;
+}
+
+.vertical{
+    background-color: #FFE4E1;
+    height: 100%;
+}

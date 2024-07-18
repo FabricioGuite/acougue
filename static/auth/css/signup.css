@@ -1,0 +1,26 @@
+.botao{
+    height: 30px;
+    width: 100px;
+    outline: none;
+    background-color: white;
+}
+
+.botao:hover{
+    height: 30px;
+    width: 100px;
+    background-color: pink;
+    transition: 1s;
+}
+
+.back{
+    color: pink;
+}
+
+.back:hover{
+    color: black;
+    transition: 0,5s;
+}
+
+.text-center{
+    color: black;
+}

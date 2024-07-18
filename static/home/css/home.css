@@ -1,0 +1,166 @@
+
+html,body{
+    margin:0;
+    height:100%;
+    overflow:auto;
+}
+
+.titulo{
+    font-weight:bold;
+    font-family: system-ui,
+    -apple-system, 
+    Arial, Helvetica,
+    sans-serif;
+    height: 25px;
+    width: 300px;
+    color: white;
+    outline: none;
+}
+
+.titulo2{
+    font-weight:bold;
+    font-family: system-ui,
+    -apple-system, 
+    Arial, Helvetica,
+    sans-serif;
+    color: black;
+    outline: none;
+}
+
+.home{
+    text-decoration: none;
+    font-weight:bold;
+    font-family: system-ui,
+    -apple-system, 
+    Arial, Helvetica,
+    sans-serif;
+    color: white;
+    outline: none;
+}
+
+.home:hover{
+    opacity: 80%;
+    transition: 1s;
+}
+
+.sobre{
+    text-decoration: none;
+    font-weight:bold;
+    font-family: system-ui,
+    -apple-system, 
+    Arial, Helvetica,
+    sans-serif;
+    color: white;
+    outline: none;
+}
+
+.sobre:hover{
+    opacity: 80%;
+    transition: 1s;
+}
+
+.blog{
+    text-decoration: none;
+    font-weight:bold;
+    font-family: system-ui,
+    -apple-system, 
+    Arial, Helvetica,
+    sans-serif;
+    color: white;
+    outline: none;
+}
+
+.blog:hover{
+    opacity: 80%;
+    transition: 1s;
+}
+
+.cardapio{
+    text-decoration: none;
+    font-weight:bold;
+    font-family: system-ui,
+    -apple-system, 
+    Arial, Helvetica,
+    sans-serif;
+    color: white;
+    outline: none;
+}
+
+.cardapio:hover{
+    opacity: 80%;
+    transition: 1s;
+}
+
+.contato{
+    text-decoration: none;
+    font-weight:bold;
+    font-family: system-ui,
+    -apple-system, 
+    Arial, Helvetica,
+    sans-serif;
+    color: white;
+    outline: none;
+}
+
+.contato:hover{
+    opacity: 80%;
+    transition: 1s;
+}
+
+.login{
+    text-decoration: none;
+    font-weight:bold;
+    font-family: system-ui,
+    -apple-system, 
+    Arial, Helvetica,
+    sans-serif;
+    color: white;
+    outline: none;
+}
+
+.login:hover{
+    opacity: 80%;
+    transition: 1s;
+}
+
+.imagens{
+    letter-spacing: 100px;
+    align-items: center;
+}
+
+nav{
+    background-color: #0d6efd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui,
+    -apple-system, 
+    Arial, Helvetica,
+    sans-serif;
+    height: 15vh;
+    
+}
+
+.vertical{
+    background-color: #FFE4E1;
+    height: 100%;
+}
+
+.logo{
+    padding-right: 30%;
+}
+
+.botoes{
+    text-align: center;
+    font-weight:bold;
+    font-family: system-ui,
+    -apple-system, 
+    Arial, Helvetica,
+    sans-serif;
+    color: white;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-right: 35%;
+}

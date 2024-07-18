@@ -1,0 +1,51 @@
+{% extends "billing/billing_index.html" %}
+{% import 'utils/forms.html' as forms %}
+
+{% block main %}
+<main class="main">
+    
+    <div class="container-fluid px-4">
+    <h3 class="mt-4">Cadastro de Cobrança</h3>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="/admin/">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="/admin/biliing/">biliing</a></li>
+        <li class="breadcrumb-item active">Cadastro de Cobrança</li>
+    </ol>
+    <div class="vertical-center">
+        <div class="container view">
+            <div class="justify-content-center">
+                <div class="container-fluid px-4">
+                    <div class="row">
+                        <div class="vertical-center">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="card-header">
+                                    Cadastrar Nova Cobrança
+                                    </div>
+                                    <div class="card-body">
+                                        <form class="row g-3 justify-content-center" enctype="multipart/form-data" action="/admin/billing/save_billing" method="POST">
+                                            {{ forms.input(label = 'Valor', value = '',name = 'value', id = 'value', type='text', box_size = 6) }}
+                                            {{ forms.input(label = 'Data', name = 'billing_date', id = 'billing_date', type='date', box_size = 3) }}
+                                            <select class="form-select" id = "billing_form_id" name="billing_form_id" >
+                                                {% for b in billing_forms %}
+                                                    <option value="{{b.id}}">{{b.name}}</option>
+                                                {% endfor %}              
+                                            </select>
+                                            <select class="form-select" id = "order_id" name="order_id" >
+                                            {% for b in orders %}
+                                                <option value="{{b.id}}">Pedido: {{b.id}} - Cliente: {{b.username}}</option>
+                                            {% endfor %}              
+                                            </select>
+                                            {{ forms.button(label = 'Cadastrar Cobrança', box_size = 12) }}
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

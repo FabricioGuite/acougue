@@ -1,0 +1,39 @@
+{% extends "billing/billing_index.html" %}
+{% block main %}
+<main>
+    <div class="container-fluid px-4">
+        <h2 class="mt-4">Listagem de Cobranças</h2>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active"><a href="/admin/">Dashboard</a></li>
+            <li class="breadcrumb-item active">Lista de Cobranças</li>
+        </ol>
+        <div class="vertical-center">
+            <div class="container view">
+                <div class="justify-content-center">
+                    <table id="view_billing_forms" class="table table-striped table-bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Valor</th>
+                                <th>Data</th>
+                                <th>Forma de Pagamento</th>
+                                <th>Id do Pedido</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for b in billings %}
+                                <tr>
+                                    <td>{{ b.value }}</td>
+                                    <td>{{ b.billing_date }}</td>
+                                    <td>{{ b.name }}</td>
+                                    <td>{{ b.order_id }}</td>
+                                    <td><i class="fa fa-trash"></i><a href="/admin/billing/delete_billing/{{ b.id }}" onclick="return confirm('Tem certeza que deseja excluir essa Cobrança?');"> Excluir</a></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock%}

@@ -1,0 +1,56 @@
+{% extends "order/order_index.html" %}
+{% import 'utils/forms.html' as forms %}
+
+{% block main %}
+<main class="main">
+    
+    <div class="container-fluid px-4">
+    <h3 class="mt-4">Cadastro de Pedido</h3>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="/admin/">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="/admin/order/">order</a></li>
+        <li class="breadcrumb-item active">Cadastro de Pedidos</li>
+    </ol>
+    <div class="vertical-center">
+        <div class="container view">
+            <div class="justify-content-center">
+                <div class="container-fluid px-4">
+                    <div class="row">
+                        <div class="vertical-center">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="card-header">
+                                    Cadastrar Novo Pedido
+                                    </div>
+                                    <div class="card-body">
+                                        <form class="row g-3 justify-content-center" enctype="multipart/form-data" action="/admin/order/save_orders" method="POST">                                                                         
+                                            <select class="form-select" id = "general" name="general">
+                                                {% for b in general %}
+                                                    <option value="{{b.id}}"> Funcionario: {{b.username}}</option>
+                                                {% endfor %}              
+                                            </select>                               
+                                            <select class="form-select"id = "product" name="product">
+                                                {% for b in product %}
+                                                    <option value="{{b.id}}"> Produto: {{b.name}}</option>
+                                                {% endfor %}              
+                                            </select>
+                                            <select class="form-select" id = "client" name="client">
+                                                {% for b in client %}
+                                                    <option value="{{b.id}}"> Cliente: {{b.username}}</option>
+                                                {% endfor %}              
+                                            </select>
+                                            {{ forms.input(label = 'Quantidade', name = 'amount', id = 'amount', type='float', box_size = 3) }}
+                                            {{ forms.input(label = 'Data', name = 'order_datetime', id = 'order_datetime', type='date', box_size = 3) }}                        
+                                            {{ forms.button(label = 'Cadastrar Pedido', box_size = 12) }}
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

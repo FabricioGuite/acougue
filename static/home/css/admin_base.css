@@ -1,0 +1,137 @@
+.pedidos{
+    text-decoration: none;
+    color: black;
+    padding-left: 10%;
+}
+
+.pedidos:hover{
+    color: gray;
+    transition: 1s;
+}
+
+.fornecedores{
+    text-decoration: none;
+    color: black;
+    padding-left: 10%;
+}
+
+.fornecedores:hover{
+    color: gray;
+    transition: 1s;
+}
+
+.produtos{
+    text-decoration: none;
+    color: black;
+    padding-left: 10%;
+}
+
+.produtos:hover{
+    color: gray;
+    transition: 1s;
+}
+
+.cobranca{
+    text-decoration: none;
+    color: black;
+    padding-left: 10%;
+}
+
+.cobranca:hover{
+    color: gray;
+    transition: 1s;
+}
+
+.sub{
+    text-decoration: none;
+    color: black;
+}
+
+.sub:hover{
+    color: gray;
+    transition: 1s;
+}
+
+.pagamento{
+    text-decoration: none;
+    color: black;
+    padding-left: 10%;
+}
+
+.pagamento:hover{
+    color: gray;
+    transition: 1s;
+}
+
+.pessoas{
+    text-decoration: none;
+    color: black;
+    padding-left: 10%;
+}
+
+.pessoas:hover{
+    color: gray;
+    transition: 1s;
+}
+
+.iot{
+    text-decoration: none;
+    color: black;
+    padding-left: 10%;
+}
+
+.iot:hover{
+    color: gray;
+    transition: 1s;
+}
+
+.fatu{
+    text-decoration: none;
+    color: black;
+    padding-left: 10%;
+}
+
+.fatu:hover{
+    color: gray;
+    transition: 1s;
+}
+
+.pag_func{
+    text-decoration: none;
+    color: black;
+    padding-left: 10%;
+}
+
+.pag_func:hover{
+    color: gray;
+    transition: 1s;
+}
+
+.modulo{
+    color: black;
+}
+
+.rela{
+    color: black;
+}
+
+h4{
+    text-decoration: none;
+    color: black;
+}
+
+.card1{
+    background-color: red;
+}
+
+.nov_ped{
+    text-align: center;
+}
+
+
+
+
+
+
+
+

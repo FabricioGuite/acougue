@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Admin</title>
+        <link href="{{ url_for('static', filename='admin/css/admin.css') }}" rel="stylesheet" />
+        <link href="{{ url_for('static', filename='home/css/style.css') }}" rel="stylesheet" />
+        <link rel="stylesheet" href="/static/home/css/admin_base.css">
+    </head>
+    <body class="sb-nav-fixed">
+
+
+        <!--HEADER TOPO DA PAGINA-->
+        
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="/admin/"><img src="/static/home/img/image.png" width="30"> Porco Feliz</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Procure por..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li class="dropdown-item" href="#!">{{ name }}</li>
+                        <li><a class="dropdown-item" href="#!">Configurações</a></li>
+                        <li><a class="dropdown-item" href="#!">Log de Atividades</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="/auth/logout">Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+
+
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Módulos</div>
+                            <a class="pedidos" href="/admin/order/">
+                                <div class="sb-nav-link-icon"><i class=""></i></div>
+                                Pedidos
+                            </a><br>
+                            <a class="fornecedores" href="/admin/supplier/">
+                                <div class="sb-nav-link-icon"><i class=""></i></div>
+                                Fornecedores
+                            </a><br>                           
+                            <a class="produtos" href="/admin/product/">
+                                <div class="sb-nav-link-icon"><i class=""></i></div>
+                                Produtos
+                            </a><br>
+                            <a class="cobranca" href="/admin/billing/">
+                                <div class="sb-nav-link-icon"><i class=""></i></div>
+                                Cobrança
+                            </a><br>
+                            <a class="pagamento" href="/admin/payment/">
+                                <div class="sb-nav-link-icon"><i class=""></i></div>
+                                Pagamento
+                            </a><br>
+                            <a class="pessoas" href="/admin/people/">
+                                <div class="sb-nav-link-icon"><i class=""></i></div>
+                                Pessoas
+                            </a><br>
+                            <a class="iot" href="/admin/iot/">
+                                <div class="sb-nav-link-icon"><i class=""></i></div>
+                                IOT
+                            </a><br>
+                            <div class="sb-sidenav-menu-heading">Relatórios</div>
+                            <div class="sb-sidenav-menu-heading">Relatórios Super legais</div>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logado como: Admin</div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                {% block main %} {% endblock main%}
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="{{ url_for('static', filename='admin/js/scripts.js') }}"></script>
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" ></script>
+        <script>
+            $(document).ready(function () {
+                var table = $('#view_sensors').DataTable( {
+                    scrollY:        "500px",
+                    scrollX:        true,
+                    scrollCollapse: true,
+                    paging:         true,
+                    fixedColumns:   {
+                        heightMatch: 'none'
+                    },
+                    language: {
+                        url:"static/language/pt_br.json"
+                    }
+                } );
+            });
+        </script>
+    </body>
+</html>

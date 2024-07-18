@@ -1,0 +1,52 @@
+{% extends "supplier/supplier_index.html" %}
+{% block main %}
+<main>
+    <div class="container-fluid px-4">
+        <h2 class="mt-4">Listagem de Fornecedores</h2>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active"><a href="/admin/">Dashboard</a></li>
+            <li class="breadcrumb-item active"><a href="/admin/supplier/">Fornecedor</a></li>
+            <li class="breadcrumb-item active">Lista de Fornecedores</li>
+        </ol>
+        <div class="vertical-center">
+            <div class="container view">
+                <div class="justify-content-center">
+                    <div class="card">
+                        <div class="card-body">
+                            {% with messages = get_flashed_messages(with_categories=true) %}
+                                {% if messages %}
+                                    {% for category, message in messages %}
+                                    <div class="alert alert-{{ category }} alert-dismissible">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                        {{ message }}
+                                    </div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+                            <table id="view_suppliers" class="table table-striped table-bordered" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Descrição</th>
+                                        <th>Nota</th>
+                                        <th>id do Funcionario Responsável</th>
+                                </thead>
+                                <tbody>
+                                    {% for supplier in suppliers %}
+                                    <tr>
+                                        <td>{{ supplier.name }}</td>
+                                        <td>{{ supplier.description }}</td>
+                                        <td>{{ supplier.grade }}</td>
+                                        <td>{{ supplier.employee_id }}</td>
+                                        <td><i class="fa fa-trash"></i><a href="/admin/supplier/delete_supplier/{{ supplier.id }}" onclick="return confirm('Tem certeza que deseja excluir esse Fornecedor?');"> Excluir</a></td>                                   
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
